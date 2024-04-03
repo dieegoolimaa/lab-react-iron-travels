@@ -22,13 +22,13 @@ const TravelList = () => {
     <div>
       <h2>Travel Plans</h2>
       <ul>
-        {travelPlans.map((item) => (
-          <li key={item.id}>
-            {item.name} - {item.details}
+        {travelPlans.map((plan) => (
+          <li key={plan.id}>
+            {plan.name} - {plan.details}
             <br />
-            {getCostLabel(item.totalCost)}
-            {item.allInclusive && " - All Inclusive"}
-            <button onClick={() => handleRemovePlan(item.id)}>Delete</button>
+            {getCostLabel(plan.totalCost)}
+            {plan.allInclusive && " - All Inclusive"}
+            <button onClick={() => handleRemovePlan(plan.id)}>Delete</button>
           </li>
         ))}
       </ul>
